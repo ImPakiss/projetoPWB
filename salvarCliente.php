@@ -5,7 +5,7 @@ if(!empty($_POST))
 {
     $id = $_POST["id"] ?? null;
     $nome = $_POST["nome"];
-    $cpf_cnpj = $_POST["cpf_cnpj"]; // Corrigido de "cpf cnpj" para "cpf_cnpj"
+    $cpf_cnpj = $_POST["cpf_cnpj"]; 
     $email = $_POST["email"];
     $telefone = $_POST["telefone"];
     $data = $_POST["datanasc"];
@@ -24,7 +24,7 @@ if(!empty($_POST))
         exit;
     }
 
-    // Corrigido "cpf cnpj" para "cpf_cnpj" e "datanasc" para "data_nascimento" (conforme a tabela criada antes)
+
     $sql = "INSERT INTO cliente (nome, cpf_cnpj, email, telefone, data_nascimento, 
     logradouro, numero, complemento, bairro, cidade, estado, cep, ativo) 
     VALUES ('$nome', '$cpf_cnpj', '$email', '$telefone', '$data', 
