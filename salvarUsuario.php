@@ -14,7 +14,7 @@ if(isset($_POST) > 0)
     }
 
     $sql = "INSERT INTO usuarios (nome, login, senha, ativo)";
-    $sql .= "values ('$nome', '$login', '%senha', 1 )";
+    $sql .= "values ('$nome', '$login', '$senha', 1 )";
 
     mysqli_query($conexao, $sql);
 
